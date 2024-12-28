@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>Emp_no</th>
+                <th>Emp_name</th>
+                <th>Emp_job</th>
+                <th>Emp_hiredate</th>
+                <th>Emp_salary</th>
+                <th>Emp_commission</th>
+                <th>Emp_mgr</th>
+                <th>Dept_no</th>
+            </tr>
+
+            {% for to in ETO %}
+            <tr>
+                <td>
+                    {{ to.Emp_no }}
+                </td>
+                <td>
+                    {{ to.Emp_name }}
+                </td>
+                <td>
+                    {{ to.Emp_job }}
+                </td>
+                <td>
+                    {{ to.Emp.Emp_hiredate }}
+                </td>
+                <td>
+                    {{ to.Emp_salary }}
+                </td>
+                <td>
+                    {{ to.Emp_commission }}
+                </td>
+                <td>
+                    {{ to.Emp_mgr }}
+                </td>
+                <td>
+                    {{ to.Dept_no }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
